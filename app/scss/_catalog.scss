@@ -1,0 +1,163 @@
+.catalog {
+	padding: 50px 0;
+	background: #f3f3f3;
+
+	&__tabs {
+		list-style-type: none;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		border-bottom: 1px solid #dddddd;
+		max-width: 710px;
+		margin-bottom: 30px;
+	}
+
+	&__tab {
+		font-size: 18px;
+		padding: 10px 22px 22px;
+		color: $dark;
+		cursor: pointer;
+		transition: all 0.1s linear;
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	&__tab-active {
+		border-bottom: 2px solid $green;
+	}
+
+	&-item {
+		margin-top: 10px;
+		padding: 10px;
+		background-color: #fff;
+		width: 730px;
+		height: 120px;
+		transition: all 0.1s linear;
+
+		&:hover {
+			box-shadow: 0 0 20px #dddddd;
+			cursor: pointer;
+
+			.catalog-item__name {
+				color: $green;
+			}
+		}
+
+		&__img {
+			width: 200px;
+			height: 100px;
+		}
+		&:first-child {
+			margin-top: 30px;
+		}
+	}
+
+	&-item__info {
+		align-items: center;
+		display: flex;
+	}
+
+	&-item__prices {
+		display: flex;
+		margin-left: 90px;
+		align-items: center;
+	}
+
+	&-item__price {
+		margin-left: 10px;
+		@extend %montserrat-bold;
+		font-size: 18px;
+	}
+
+	&-item__discounts {
+		color: #fff;
+		padding: 5px 10px;
+		background-color: $green;
+	}
+
+	&-item__desc {
+		margin-left: 20px;
+		width: 250px;
+	}
+
+	&-item__genre {
+		color: #9d9db1;
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	&-item__genres {
+		margin-left: 10px;
+	}
+
+	&__content {
+		display: none;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&-active {
+			display: flex;
+		}
+	}
+}
+
+.catalogs--left {
+	max-width: 730px;
+}
+
+.raffle__title {
+	@extend %montserrat-bold;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.catalog__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog--raffle {
+	max-width: 420px;
+	height: 120px;
+	padding: 10px;
+	background-color: #fff;
+
+	&:hover {
+		box-shadow: 0 0 20px #dddddd;
+		cursor: pointer;
+
+		.raffle__name {
+			color: $green;
+		}
+	}
+
+	.raffle__wrapper {
+		display: flex;
+		align-items: center;
+
+		img {
+			max-width: 200px;
+			height: 100px;
+		}
+	}
+
+	.raffle__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 15px;
+		text-align: left;
+	}
+
+	.raffle__name {
+		font-size: 17px;
+		@extend %montserrat-bold;
+	}
+
+	.raffle__desc {
+		margin-top: 10px;
+	}
+}
